@@ -9,8 +9,19 @@
 	<table>
 		<tr>
 			<td>Name :</td>
-			<td>${name}</td>
+			<td>${employee.name}</td>
 		</tr>
+		
+		<tr>
+			<td>Surname :</td>
+			<td>${employee.surname}</td>
+		</tr>
+		
+		 <tr>
+                <td>Profession:</td>
+                <td>${employee.profession}</td>
+            </tr>
+		
 	</table>
 </body>
 </html>
