@@ -29,6 +29,12 @@ font-style: italic;
                     <td>Profession:</td>
                     <td><form:select path="profession" items="${professionList}" /></td>
                 </tr>
+                
+                <tr>
+                	<td>Hobby:</td>
+                	<td><form:checkbox path="hobby"/></td>
+                </tr>
+                
                 <tr>
                 
                 <tr>

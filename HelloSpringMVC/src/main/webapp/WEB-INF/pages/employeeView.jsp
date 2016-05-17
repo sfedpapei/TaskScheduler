@@ -20,7 +20,12 @@
 		 <tr>
                 <td>Profession:</td>
                 <td>${employee.profession}</td>
-            </tr>
+         </tr>
+         
+         <tr>
+                <td>HasHobby:</td>
+                <td>${employee.hobby}</td>
+         </tr>
 		
 	</table>
 </body>

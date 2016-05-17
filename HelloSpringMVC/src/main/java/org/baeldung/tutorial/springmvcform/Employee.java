@@ -7,6 +7,8 @@ public class Employee {
 	private String profession;
 	
 	private String surname;
+	
+	private boolean hobby;
 
 	public String getName() {
 		return name;
@@ -30,6 +32,14 @@ public class Employee {
 
 	public void setSurname(String surname) {
 		this.surname = surname;
+	}
+
+	public boolean isHobby() {
+		return hobby;
+	}
+
+	public void setHobby(boolean hobby) {
+		this.hobby = hobby;
 	}
 	
 	
