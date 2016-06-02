@@ -4,5 +4,7 @@ import org.timesheet.domain.Timesheet;
 import org.timesheet.service.GenericDao;
 
 public interface TimesheetDao extends GenericDao<Timesheet, Long> {
+	
+	boolean addTimesheet(Timesheet timesheet);
 
 }
