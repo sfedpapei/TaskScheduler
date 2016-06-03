@@ -36,5 +36,5 @@ insert into timesheet values(1,
 insert into timesheet values(2,
  8, -- hours
  2, -- second task
- 3 -- employee bill gates
+ 2 -- employee bill gates
 );

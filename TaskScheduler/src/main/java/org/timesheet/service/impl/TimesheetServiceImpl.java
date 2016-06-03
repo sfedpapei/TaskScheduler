@@ -1,5 +1,6 @@
 package org.timesheet.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -43,7 +44,8 @@ public class TimesheetServiceImpl implements TimesheetService {
 		Task busiestTask = tasks.get(0);
 
 		for (Task task : tasks) {
-			if (task.getAssignedEmployees().size() > busiestTask.getAssignedEmployees().size()) {
+			if (task.getAssignedEmployees().size() > busiestTask
+					.getAssignedEmployees().size()) {
 				busiestTask = task;
 			}
 		}
@@ -52,14 +54,29 @@ public class TimesheetServiceImpl implements TimesheetService {
 
 	@Override
 	public List<Task> tasksForEmployee(Employee e) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Task> allTasks = taskDao.list();
+		List<Task> tasksForEmployee = new ArrayList<Task>();
+
+		for (Task task : allTasks) {
+			if (task.getAssignedEmployees().contains(e)) {
+				tasksForEmployee.add(task);
+			}
+		}
+		return tasksForEmployee;
 	}
 
 	@Override
 	public List<Task> tasksForManager(Manager m) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Task> allTasks = taskDao.list();
+		List<Task> tasksForManager = new ArrayList<Task>();
+
+		for (Task task : allTasks) {
+			if (task.getManager().equals(m)) {
+				tasksForManager.add(task);
+			}
+		}
+		return tasksForManager;
+
 	}
 
 }
